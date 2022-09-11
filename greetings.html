@@ -39,8 +39,14 @@ body{
     
     var today = new Date();
     var hrs = today.getHours();
+    var day = today.getDate();
+    var year = today.getFullYear();
     var dayOfWeek = weekday[today.getDay()];
     var date = dayOfWeek+" " + today.getDate() + "/" +(today.getMonth()+1) +'/'+today.getFullYear()  ;
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+var month = monthNames[today.getMonth()];
 
     var greet;
 
@@ -52,6 +58,6 @@ body{
         greet = 'Good Evening  ';
 
     document.getElementById('lbl').innerHTML =
-        greet+=`<div id="date"> It's ${date}</div>`;
+        greet+=`<div id="date"> It's ${month} ${day}, ${year}  </div>`;
 </script> 
 </html>
